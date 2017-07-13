@@ -1,0 +1,108 @@
+/*Ubuntu:300,400,500,700*/
+
+html{
+	font-size: 100%;
+}
+
+body{
+	font-size: 0.9em;
+	overflow-x: hidden;
+}
+
+.bigtitle{
+	font-family: 'Ubuntu', sans-serif;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	background: url(assets/img/bigtitle__background.jpg);
+}
+
+	.bigtitle__backgroundcolor{
+		display: flex;
+		height: 100vh;
+		width: 100vw;
+		background-color: rgba(0, 45, 41, 0.92);
+		transition: 2s background-color;
+	}
+
+	.bigtitle__job{
+		color: #fff;
+		font-size: 1.5em;
+		font-weight: 300;
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		text-align: center;
+		bottom: 110px;
+		transition: 2s opacity;
+	}
+	
+	.bigtitle__text{
+		color: #fff;
+		margin: auto;
+		font-size: 8em;
+		letter-spacing: 0.6em;	
+	}
+
+	.bigtitle__anthonydouardlogo{
+		position: absolute;
+		width: 172px;
+		left: 0;
+		right: 0;
+		bottom: 30px;
+		margin: 0 auto;
+		opacity: 0;
+		transition: 2s opacity;
+		height: auto;
+		cursor: pointer;
+	}
+
+		#show{
+			opacity: 0;
+		}
+
+		#brush{
+			transition: 0.3s all;
+		}
+
+
+		#left, #show, #right, #slash{
+			transition: 0.4s all;
+		}
+
+		.bigtitle__anthonydouardlogo:hover #brush{
+			opacity: 0;
+		}
+
+		.bigtitle__anthonydouardlogo:hover #show{
+			opacity: 1;
+		}
+
+		.bigtitle__anthonydouardlogo:hover #code #left{
+			transform: translateX(-50px);
+		}
+
+		.bigtitle__anthonydouardlogo:hover #code #right{
+			transform: translateX(30px);
+		}
+		.bigtitle__anthonydouardlogo:hover #code #slash{
+			transform: translateX(30px);
+		}
+
+	.bigtitle__text--name{
+		font-weight: 500;
+	}
+
+	.bigtitle__text--firstname{
+		font-weight: 300;
+		margin-left: 2em;
+	}
+
+
+.bio{
+	height: 100vh;
+	width: 100vw;
+	background-color: #00272f;
+}
