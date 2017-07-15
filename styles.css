@@ -1,4 +1,5 @@
 /*Ubuntu:300,400,500,700*/
+/*OpenSANS: 300,400,600,700*/
 
 html{
 	font-size: 100%;
@@ -14,95 +15,137 @@ body{
 	display: flex;
 	height: 100vh;
 	width: 100vw;
-	background: url(assets/img/bigtitle__background.jpg);
+	background: url(assets/img/bigtitle__background.jpg);     
 }
 
-	.bigtitle__backgroundcolor{
-		display: flex;
-		height: 100vh;
-		width: 100vw;
-		background-color: rgba(0, 45, 41, 0.92);
-		transition: 2s background-color;
-	}
+    .bigtitle__backgroundcolor{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 45, 41, 0.92);
+            transition: 2s background-color;
+    }
 
-	.bigtitle__job{
-		color: #fff;
-		font-size: 1.5em;
-		font-weight: 300;
-		position: absolute;
-		margin: 0 auto;
-		left: 0;
-		right: 0;
-		opacity: 0;
-		text-align: center;
-		bottom: 110px;
-		transition: 2s opacity;
-	}
-	
-	.bigtitle__text{
-		color: #fff;
-		margin: auto;
-		font-size: 8em;
-		letter-spacing: 0.6em;	
-	}
+    .bigtitle__job{
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: 300;
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            text-align: center;
+            bottom: 110px;
+            transition: 2s opacity;
+    }
 
-	.bigtitle__anthonydouardlogo{
-		position: absolute;
-		width: 172px;
-		left: 0;
-		right: 0;
-		bottom: 30px;
-		margin: 0 auto;
-		opacity: 0;
-		transition: 2s opacity;
-		height: auto;
-		cursor: pointer;
-	}
+    .bigtitle__text{
+            opacity: 1;
+            color: #fff;
+            margin: auto;
+            font-size: 8em;
+            letter-spacing: 0.6em;	
+            transition: 0.4s all;
+    }
 
-		#show{
-			opacity: 0;
-		}
+    .bigtitle__anthonydouardlogo{
+            position: absolute;
+            width: 172px;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            margin: 0 auto;
+            opacity: 0;
+            transition: 2s opacity;
+            height: auto;
+            cursor: pointer;
+    }
 
-		#brush{
-			transition: 0.3s all;
-		}
+        #show{
+                opacity: 0;
+        }
 
+        #brush{
+                transition: 0.3s all;
+        }
 
-		#left, #show, #right, #slash{
-			transition: 0.4s all;
-		}
+        #left, #show, #right, #slash{
+                transition: 0.4s all;
+        }
 
-		.bigtitle__anthonydouardlogo:hover #brush{
-			opacity: 0;
-		}
+        .bigtitle__anthonydouardlogo:hover #brush{
+                opacity: 0;
+        }
 
-		.bigtitle__anthonydouardlogo:hover #show{
-			opacity: 1;
-		}
+        .bigtitle__anthonydouardlogo:hover #show{
+                opacity: 1;
+        }
 
-		.bigtitle__anthonydouardlogo:hover #code #left{
-			transform: translateX(-50px);
-		}
+        .bigtitle__anthonydouardlogo:hover #code #left{
+                transform: translateX(-50px);
+        }
 
-		.bigtitle__anthonydouardlogo:hover #code #right{
-			transform: translateX(30px);
-		}
-		.bigtitle__anthonydouardlogo:hover #code #slash{
-			transform: translateX(30px);
-		}
+        .bigtitle__anthonydouardlogo:hover #code #right{
+                transform: translateX(30px);
+        }
+        
+        .bigtitle__anthonydouardlogo:hover #code #slash{
+                transform: translateX(30px);
+        }
 
-	.bigtitle__text--name{
-		font-weight: 500;
-	}
+    .bigtitle__text--name{
+            font-weight: 500;
+    }
 
-	.bigtitle__text--firstname{
-		font-weight: 300;
-		margin-left: 2em;
-	}
+    .bigtitle__text--firstname{
+            font-weight: 300;
+            margin-left: 2em;
+    }
 
-
-.bio{
-	height: 100vh;
-	width: 100vw;
-	background-color: #00272f;
+    
+.menu__container{
+    width: auto;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
 }
+    .menu__case{
+        display: inline-block;
+        text-align: center;
+        width: calc(100vw/6);
+        height: 400px;
+        margin: 0px 1vw;
+        background-color: rgba(255,255,255,1);
+        border-radius: 4px;
+        transition: 3s transform, 0.4s width, .4s height;
+        transform: translateY(-400px);
+        transform-origin: 50% 50%;
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .3s forwards, menu__case--float 20s ease-in-out 0.5s infinite ;
+    }
+    
+    .menu__case:hover{
+        width: 18vw;
+    }
+    
+    .menu__case:nth-child(2){
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .4s forwards, menu__case--float 20s ease-in-out 1.5s infinite;
+    }
+    .menu__case:nth-child(3){
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .2s forwards, menu__case--float 20s ease-in-out 2s infinite;
+    }
+    .menu__case:nth-child(4){
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .5s forwards, menu__case--float 20s ease-in-out 1s infinite;
+    }
+    
+    @keyframes menu__case--down {
+        from {transform: translateY(-400px);}
+        to {transform: translateY(150px);}
+    }
+    
+    @keyframes menu__case--float{
+        0%{transform: translateY(150px);}
+        25%{transform: translateY(140px);}
+        50%{transform: translateY(160px);}
+        75%{transform: translateY(140px);}
+        100%{transform: translateY(150px);}
+    }
