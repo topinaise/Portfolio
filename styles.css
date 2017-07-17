@@ -115,26 +115,32 @@ body{
         width: calc(100vw/6);
         height: 400px;
         margin: 0px 1vw;
-        background-color: rgba(255,255,255,1);
+        background-color: rgba(255,255,255,0.5);
         border-radius: 4px;
         transition: 3s transform, 0.4s width, .4s height;
         transform: translateY(-400px);
         transform-origin: 50% 50%;
-        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .3s forwards, menu__case--float 20s ease-in-out 0.5s infinite ;
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .3s forwards;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("assets/img/web.jpeg");
     }
     
     .menu__case:hover{
-        width: 18vw;
     }
     
     .menu__case:nth-child(2){
-        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .4s forwards, menu__case--float 20s ease-in-out 1.5s infinite;
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .4s forwards;
+        background-image: url("assets/img/print.jpeg");
+        
     }
     .menu__case:nth-child(3){
-        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .2s forwards, menu__case--float 20s ease-in-out 2s infinite;
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .2s forwards;
+        background-image: url("assets/img/audiovisual.jpeg");
     }
     .menu__case:nth-child(4){
-        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .5s forwards, menu__case--float 20s ease-in-out 1s infinite;
+        animation: menu__case--down 0.4s cubic-bezier(.49,.16,.26,1.17) .5s forwards;
     }
     
     @keyframes menu__case--down {
@@ -144,8 +150,27 @@ body{
     
     @keyframes menu__case--float{
         0%{transform: translateY(150px);}
-        25%{transform: translateY(140px);}
-        50%{transform: translateY(160px);}
-        75%{transform: translateY(140px);}
+        25%{transform: translateY(145px);}
+        50%{transform: translateY(155px);}
+        75%{transform: translateY(145px);}
         100%{transform: translateY(150px);}
+    }
+    
+    .menu__case h2{
+        font-weight: 400;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(2, 43, 53,0.8);
+        padding: 10px 0;
+        color: #fff;
+        transition: 0.4s height;
+        height: 8%;
+        border-radius: 0px 0px 4px 4px;
+    }
+    
+    .menu__case:hover h2{
+        height: 80%;
     }
