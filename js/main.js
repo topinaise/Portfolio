@@ -1,13 +1,13 @@
-window.onload = function () {
-    var job = document.querySelector(".bigtitle__job");
-    var logo = document.querySelector(".bigtitle__anthonydouardlogo");
+var job = document.querySelector(".bigtitle__job");
+var logo = document.querySelector(".bigtitle__anthonydouardlogo");
+var color = document.querySelector(".bigtitle__backgroundcolor");
+var bigtitleText = document.querySelector(".bigtitle__text");
 
+window.onload = function () {
     setTimeout(function () {
         job.style.opacity = "1";
         logo.style.opacity = "1";
     }, 100);
-
-    var color = document.querySelector(".bigtitle__backgroundcolor");
 
     setTimeout(function () {
         color.style.backgroundColor = "rgba(0, 45, 41, 0.75)";
@@ -26,9 +26,7 @@ function displayMenu() {
     /*** Traitement de la réponse. ***/
     XHR.onreadystatechange = function () {
         if (XHR.readyState === 4 && XHR.status === 200) {
-            var bigtitleText = document.querySelector(".bigtitle__text");
             bigtitleText.style.opacity = "0";
-
             // La réponse se trouve dans XHR.responseText
             setTimeout(function () {
                 bigtitleText.outerHTML = "";
@@ -41,5 +39,7 @@ function displayMenu() {
     XHR.open("GET", "menu.html", true);
     XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     XHR.send(str);
+
+	logo.classList.remove("canhover");	
 
 }
