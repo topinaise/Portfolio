@@ -2,6 +2,7 @@ var job = document.querySelector(".bigtitle__job");
 var logo = document.querySelector(".bigtitle__anthonydouardlogo");
 var color = document.querySelector(".bigtitle__backgroundcolor");
 var bigtitleText = document.querySelector(".bigtitle__text");
+var pop = false;
 
 window.onload = function () {
     setTimeout(function () {
@@ -40,6 +41,18 @@ function displayMenu() {
     XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     XHR.send(str);
 
-	logo.classList.remove("canhover");	
+	logo.classList.remove("canhover");
+
+    history.pushState(null, null, "?page=menu");
+
+}
+
+
+function displayContent(elem){
+    elem.classList.add("menu__case--active");
+
+    var caseContent = document.querySelector(".menu__case--content");
+
+    caseContent.style.display = "block";
 
 }

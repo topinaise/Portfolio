@@ -134,7 +134,7 @@ body{
         margin: 0px 1vw;
         background-color: rgba(255, 255, 255, 0.39);
         border-radius: 4px;
-        transition: 3s transform, 0.4s width, .4s height;
+        transition: 3s transform, 0.4s width, .4s height, .4s background-color;
         transform: translateY(-400px);
         transform-origin: 50% 50%;
         transform-style: preserve-3d;
@@ -168,6 +168,36 @@ body{
         transition: 0.4s height;
         height: 15%;
         border-radius: 0px 0px 4px 4px;
+    }
+
+    .menu__case--content{
+        display: none;
+        
+    }
+
+    .menu__case--content h1{
+        color: #252525;
+    }
+
+    #ajax__receiver .menu__container .menu__case--active{
+        animation: none;
+        transform: translateY(0px);
+        position: absolute;
+        z-index: 999;
+        background-color: #fff;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .menu__case--active::before, .menu__case--active::after{
+        display: none;
+    }
+
+    .menu__case--active h2{
+        display: none;
     }
     
     .menu__case::before, .menu__case::after{
@@ -236,7 +266,7 @@ body{
     
     
     
-    .menu__case:hover h2{
+    .menu__case:not(.menu__case--active):hover h2{
         height: 95%;
         border-radius: 4px;
     }
